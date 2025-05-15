@@ -15,25 +15,25 @@
         <p>Humidity : <%= weather.current.humidity %>
         </p>
         <p>Quility index : <% if(index==1){ %>
-                <p>Good</p>
-                <% }if(index==2){ %>
-                    <p>Moderate</p>
-                    <% }if(index==3){ %>
-                        <p>Bad</p>
-                        <% }if(index==4){ %>
-                            <p>Very Bad</p>
-                            <% }if(index==5){ %>
-                                <p>Very very Bad</p>
-                                <% }if(index==6){ %>
-                                    <p> Hazardous</p>
+                Good</p>
+        <% }if(index==2){ %>
+            Moderate</p>
+            <% }if(index==3){ %>
+                Bad</p>
+                <% }if(index==4){ %>
+                    Very Bad</p>
+                    <% }if(index==5){ %>
+                        Very very Bad</p>
+                        <% }if(index==6){ %>
+                            Hazardous</p>
+                            <% } %>
+                                <img src="<%= weather.current.condition.icon %>" alt="icon" />
+                                <% } else { %>
+                                    <p>No weather data available.</p>
                                     <% } %>
-                                        <img src="<%= weather.current.condition.icon %>" alt="icon" />
-                                        <% } else { %>
-                                            <p>No weather data available.</p>
-                                            <% } %>
-                                                <form action="/goback" method="post">
-                                                    <button type="submit">Re Enter</button>
-                                                </form>
+                                        <form action="/goback" method="post">
+                                            <button type="submit">Re Enter</button>
+                                        </form>
 </body>
 
 </html>
