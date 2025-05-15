@@ -8,8 +8,8 @@ app.set('views', './views')
 app.use(express.static("public"))
 app.use(express.urlencoded({ extended: true }))
 
-const APIkey = "2bae2e631d944e3eab2122155251505"
-const geoKey = "ff34daa14ac04c408c24f94898e61e10"
+const APIkey = ""
+const geoKey = ""
 
 var lat
 var lon
