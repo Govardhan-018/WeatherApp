@@ -3,37 +3,76 @@
 
 <head>
     <title>Weather</title>
+    <link rel="stylesheet" href="./style2.css">
 </head>
 
 <body>
-    <% if (weather) { %>
-        <h1>Weather in <%= weather.location.name %>, <%= weather.location.country %>
-        </h1>
-        <p>Temperature: <%= weather.current.temp_c %> °C</p>
-        <p>Condition: <%= weather.current.condition.text %>
-        </p>
-        <p>Humidity : <%= weather.current.humidity %>
-        </p>
-        <p>Quility index : <% if(index==1){ %>
-                Good</p>
-        <% }if(index==2){ %>
-            Moderate</p>
-            <% }if(index==3){ %>
-                Bad</p>
-                <% }if(index==4){ %>
-                    Very Bad</p>
-                    <% }if(index==5){ %>
-                        Very very Bad</p>
-                        <% }if(index==6){ %>
-                            Hazardous</p>
-                            <% } %>
-                                <img src="<%= weather.current.condition.icon %>" alt="icon" />
-                                <% } else { %>
-                                    <p>No weather data available.</p>
+    <nav class="nav">
+        <h1>GO weather info</h1>
+    </nav>
+    <div class="container">
+        <% if (weather) { %>
+            <div class="location">
+                <h2>Weather in <%= weather.location.name %>, <%= weather.location.country %>
+                </h2>
+            </div>
+            <div class="temperature">
+                <p>Temperature: <%= weather.current.temp_c %> °C</p>
+            </div>
+            <div class="condition">
+                <p>Condition: <%= weather.current.condition.text %>
+                </p>
+            </div>
+            <div class="humidity">
+                <p>Humidity : <%= weather.current.humidity %>
+                </p>
+            </div>
+            <div class="quelity">
+                <p>Quility index : <% if(index==1){ %>
+                        Good</p>
+                <% }if(index==2){ %>
+                    Moderate</p>
+                    <% }if(index==3){ %>
+                        Bad</p>
+                        <% }if(index==4){ %>
+                            Very Bad</p>
+                            <% }if(index==5){ %>
+                                Very very Bad</p>
+                                <% }if(index==6){ %>
+                                    Hazardous</p>
                                     <% } %>
-                                        <form action="/goback" method="post">
-                                            <button type="submit">Re Enter</button>
-                                        </form>
+            </div>
+            <% } else { %>
+                <p>No weather data available.</p>
+                <% } %>
+                    <div class="bt">
+                        <form action="/goback" method="post">
+                            <button class="button" type="submit">Re Enter</button>
+                        </form>
+                    </div>
+                    <div class="otherday">
+                        <div class="tomorow">
+                            <h3>Tomorrow :</h3>
+                            <p class="p1">Date: <%=tomoro.date %>
+                            </p>
+                            <p class="p1">AvgTemperature: <%=tomoro.day.avgtemp_c %> °C</p>
+                            <p class="p1">Condition: <%= tomoro.day.condition.text %>
+                            </p>
+                            <p class="p1">AvgHumidity : <%= tomoro.day.avghumidity %> %</p>
+                        </div>
+                        <div class="dayafter">
+                            <h3>Day After :</h3>
+                            <p class="p1">Date: <%=dayaft.date %>
+                            </p>
+                            <p class="p1">AvgTemperature: <%=dayaft.day.avgtemp_c %> °C</p>
+                            <p class="p1">Condition: <%=dayaft.day.condition.text %>
+                            </p>
+                            <p class="p1">AvgHumidity : <%= dayaft.day.avghumidity %> %
+                            </p>
+                        </div>
+
+                    </div>
+    </div>
 </body>
 
 </html>

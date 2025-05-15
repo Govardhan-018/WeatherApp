@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style1.css">
 </head>
 <body>
-    <h2>Enter the location PIN code : </h2>
+    <nav class="nav"><h1>GO weather info</h1></nav>
+    <div class="container">
+    <h2>Enter the PIN code : </h2>
     <form action="/location" method="post">
-        <input type="text" name="location">
-        <button type="submit">Submit</button>
+        <input class="pinform" type="text" name="location" pattern="\d{6}" maxlength="6" minlength="6" required>
+        <button type="submit" class="sumbt">Submit</button>
     </form>
+    </div>
+     <div class="dicription">
+        <p>Just entering the PIN code of your locality or whare you want to check this application brows that and gives you .THANK YOU for visiting</p>
+    </div>
 </body>
 </html>

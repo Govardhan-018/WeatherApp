@@ -1,0 +1,84 @@
+   @import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=DynaPuff:wght@400..700&display=swap');
+
+   * {
+       color: white;
+       font-family: "Atma", system-ui;
+       margin: 0%;
+   }
+
+   body {
+       background-image: url(/images/pattern3.png);
+       display: flex;
+       align-items: center;
+       height: 100vh;
+       width: 100vw;
+       flex-direction: column;
+   }
+
+   h1 {
+       font-size: 60px;
+   }
+
+   h2 {
+       font-size: 40px;
+   }
+
+   .nav {
+       height: 10vh;
+       width: 100vw;
+       background-color: rgb(255, 167, 4);
+       color: black;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   }
+
+   .container {
+       display: flex;
+       gap: 60px;
+       position: relative;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       height: 50vh;
+       width: 100vw;
+
+   }
+
+   .dicription {
+       position: absolute;
+       bottom: 30px;
+       font-size: 20px;
+       font-weight: bold;
+
+   }
+
+   .pinform {
+       background-color: black;
+       padding: 0;
+       margin: 0%;
+       border: 0cap;
+       cursor: pointer;
+       height: 5vh;
+       width: 15vw;
+       color: white;
+       font-size: 25px;
+       font-weight: bold;
+   }
+
+   form {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       gap: 20px;
+   }
+
+   .sumbt {
+       color: black;
+       height: 5vh;
+       width: 10vw;
+       font-size: 25px;
+       font-weight: bold;
+       cursor: pointer;
+   }

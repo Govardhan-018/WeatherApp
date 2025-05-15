@@ -1,0 +1,77 @@
+ @import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=DynaPuff:wght@400..700&display=swap');
+
+ * {
+     color: white;
+     font-family: "Atma", system-ui;
+     margin: 0%;
+ }
+
+ body {
+     background-image: url(/images/pattern4.png);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+ }
+
+ h3 {
+     font-size: 30px;
+ }
+
+ .nav {
+     height: 10vh;
+     width: 100vw;
+     background-color: rgb(255, 167, 4);
+     color: white;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .container {
+     width: 100vw;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+ }
+
+ .location {
+     font-size: 40px;
+ }
+
+ .temperature,
+ .condition,
+ .humidity,
+ .quelity {
+     font-size: 30px;
+     font-weight: bold;
+ }
+
+ .otherday {
+     margin-top: 6vh;
+     display: flex;
+     width: 100vw;
+     justify-content: space-around;
+     align-items: center;
+     flex-direction: row;
+
+ }
+
+ .p1 {
+     font-size: 25px;
+     font-weight: bold;
+ }
+
+ .button {
+     background-color: black;
+     color: white;
+     height: 7vh;
+     width: 19vw;
+     font-size: 30px;
+     padding: 0%;
+     margin-top: 5px;
+     font-weight: bold;
+     border: 0cap;
+     cursor: pointer;
+ }
