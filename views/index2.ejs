@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather</title>
+</head>
+
+<body>
+    <% if (weather) { %>
+        <h1>Weather in <%= weather.location.name %>, <%= weather.location.country %>
+        </h1>
+        <p>Temperature: <%= weather.current.temp_c %> °C</p>
+        <p>Condition: <%= weather.current.condition.text %>
+        </p>
+        <p>Humidity : <%= weather.current.humidity %>
+        </p>
+        <p>Quility index : <% if(index==1){ %>
+                <p>Good</p>
+                <% }if(index==2){ %>
+                    <p>Moderate</p>
+                    <% }if(index==3){ %>
+                        <p>Bad</p>
+                        <% }if(index==4){ %>
+                            <p>Very Bad</p>
+                            <% }if(index==5){ %>
+                                <p>Very very Bad</p>
+                                <% }if(index==6){ %>
+                                    <p> Hazardous</p>
+                                    <% } %>
+                                        <img src="<%= weather.current.condition.icon %>" alt="icon" />
+                                        <% } else { %>
+                                            <p>No weather data available.</p>
+                                            <% } %>
+                                                <form action="/goback" method="post">
+                                                    <button type="submit">Re Enter</button>
+                                                </form>
+</body>
+
+</html>
